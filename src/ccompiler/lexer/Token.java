@@ -23,6 +23,12 @@ public class Token {
     
     
     }
+    public String toString(){
+    StringBuilder s = new StringBuilder();
+    s.append("The symbol is ").append(symbol).append(" and the type is ").append(type);
+    
+    return s.toString();
+    }
 
     public int getCol() {
         return col;
