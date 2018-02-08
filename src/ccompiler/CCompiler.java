@@ -9,6 +9,7 @@ import ccompiler.lexer.Lexer;
 import ccompiler.lexer.Token;
 import ccompiler.lexer.Tokenizer;
 import edu.svu.csc326.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -20,13 +21,12 @@ public class CCompiler {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String current = System.getProperty("user.dir");
-        System.out.println(current);
-        current += "\\src\\ccompiler\\lexer\\test";
-        Lexer l = new Lexer(current);
-        ArrayList tokens = new ArrayList();
-        for(int i = 0; i < tokens.getLength(); i++){
-        System.out.println(tokens.retrieve(i));
+
+        Lexer l = new Lexer(args[0]);
+        Iterator it = l.iterator();
+        while(it.hasNext()){
+            
+        System.out.println(it.next());
         
         }
     }
